@@ -16,7 +16,6 @@ router.get('/', withAuth, (req, res) => {
       'content',
       'title',
       'created_at',
-    //   [sequelize.literal('(SELECT COUNT(*) FROM vote WHERE post.id = vote.post_id)'), 'vote_count']
     ],
     include: [
       {
@@ -53,7 +52,6 @@ router.get('/edit/:id', withAuth, (req, res) => {
       'post_url',
       'title',
       'created_at',
-    //   [sequelize.literal('(SELECT COUNT(*) FROM vote WHERE post.id = vote.post_id)'), 'vote_count']
     ],
     include: [
       {
@@ -70,24 +68,22 @@ router.get('/edit/:id', withAuth, (req, res) => {
       }
     ]
   })
-    .then(dbPostData => {
-      if (dbPostData) {
-        const post = dbPostData.get({ plain: true });
-        
-        res.render('edit-post', {
-          post,
-          loggedIn: true
-        });
-      } else {
-        res.status(404).end();
-      }
-    })
-    .catch(err => {
-      res.status(500).json(err);
-    });
+  .then(dbPostData => {
+    if (!dbPostData) {
+        res.status(404).json({ message: 'No post found with this id' });
+        return;
+    }
+
+    const post = dbPostData.get({ plain: true });
+    res.render('edit-post', { post, loggedIn: true });
+})
+.catch(err => {
+    console.log(err);
+    res.status(500).json(err);
 });
-router.get('/new', (req,res) => {
-    res.render('new-post');
+})
+router.get('/new', (req, res) => {
+res.render('new-post');
 });
 
 module.exports = router;

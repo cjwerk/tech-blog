@@ -5,14 +5,20 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tech Blog</title>
-  <link rel="stylesheet" href="/stylesheets/style.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+
 </head>
 
-<body>
-  <div class="wrapper">
-      <header class="hero">
-          <div>
-            <nav class"nav">
+<body class="w3-light-grey">
+  <div class="w3-content" style="max-width:1400px">
+
+<!-- Header -->
+<header class="w3-container w3-center w3-padding-32"> 
+  <h1><b>TECH BLOG</b></h1>
+  <p>Welcome to the blog of <span class="w3-tag">Chris</span></p>
+            <nav class="nav">
                     <a class="link" href="/">Home</a>
                     <a class="link" href="/dashboard">Dashboard</a>
                     {{#if loggedIn}}
@@ -21,18 +27,94 @@
                     <a class="link" href="/login">Login</a>
                     {{/if}}
                 </nav>          
-          </div>
-
-          <h1 class="app-title"><i class="fab "></i>Tech Blog</h1>
       </header>
+<div class="w3-row">
+<div class="w3-col l8 s12">
+      
 
     <main>
       {{{ body }}}
     </main>
-  </div>
+        </div>
+<div class="w3-col l4">
 
+  
+<!-- END BLOG ENTRIES -->
+</div>
+
+<!-- Introduction menu -->
+<div class="w3-col l4">
+  <!-- About Card -->
+  <div class="w3-card w3-margin w3-margin-top">
+  <img src="https://mail.google.com/mail/u/0?ui=2&ik=0e0cc0fd86&attid=0.1&permmsgid=msg-f:1689181380040763356&th=17712d83f688a7dc&view=att&disp=safe" style="width:100%">
+    <div class="w3-container w3-white">
+      <h4><b>Chris Werkheiser</b></h4>
+      <p>Just me, myself and I, exploring the universe of uknownment. I have a heart of love and a interest of programing so that's wht I made a tech blog. I want to share my world with you.</p>
+    </div>
+  </div><hr>
+  
+  <!-- Posts -->
+  <div class="w3-card w3-margin">
+    <div class="w3-container w3-padding">
+      <h4>Popular Posts</h4>
+    </div>
+    <ul class="w3-ul w3-hoverable w3-white">
+      <li class="w3-padding-16">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSc1vlFqHmKdMhsnBXZVwgEALOvuTfiG-SrgQ&usqp=CAU" alt="Image" class="w3-left w3-margin-right" style="width:50px">
+
+        <span class="w3-large">Lorem</span><br>
+        <span>Sed mattis nunc</span>
+      </li>
+      <li class="w3-padding-16">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSn8YYKDeyl00sXSMwocJER4gFXvdIsy4O03A&usqp=CAU" alt="Image" class="w3-left w3-margin-right" style="width:50px">
+        <span class="w3-large">Ipsum</span><br>
+        <span>Praes tinci sed</span>
+      </li> 
+      <li class="w3-padding-16">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQA_etwK8PhVYDzrlXUbTIMeAWLR5DD6jERGA&usqp=CAU" alt="Image" class="w3-left w3-margin-right" style="width:50px">
+        <span class="w3-large">Dorum</span><br>
+        <span>Ultricies congue</span>
+      </li>   
+      <li class="w3-padding-16 w3-hide-medium w3-hide-small">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9PuzTd6FdIKaDs6qKbU7jUoSu8jxspGClwQ&usqp=CAU" alt="Image" class="w3-left w3-margin-right" style="width:50px">
+        <span class="w3-large">Mingsum</span><br>
+        <span>Lorem ipsum dipsum</span>
+      </li>  
+    </ul>
+  </div>
+  <hr> 
+ 
+  <!-- Labels / tags -->
+  <div class="w3-card w3-margin">
+    <div class="w3-container w3-padding">
+      <h4>Tags</h4>
+    </div>
+    <div class="w3-container w3-white">
+    <p><span class="w3-tag w3-black w3-margin-bottom">Programing</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Python</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">London</span>
+      <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">JavaScript</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">C++</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">DIY</span>
+      <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">HTML</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">C#</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Family</span>
+      <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">CSS</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Java</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Shopping</span>
+      <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Node</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Ruby</span>
+    </p>
+    </div>
+  </div>
+  
+<!-- END Introduction Menu -->
+</div>
+
+<!-- END GRID -->
+</div><br>
+
+<!-- END w3-content -->
+</div>
+
+<!-- Footer -->
+<footer class="w3-container w3-dark-grey w3-padding-32 w3-margin-top">
+  <button class="w3-button w3-black w3-padding-large w3-margin-bottom"> <a href="https://github.com/cjwerk" target="_blank"></a>Github</button>
+  <p class="w3-button w3-black w3-padding-large w3-margin-bottom"> <a href="https://www.linkedin.com/in/chris-werkheiser-3375891bb/" target="_blank">Linkedin</a></p>
+</footer>
     {{#if loggedIn}}
-    <script src="/javascript/logout.js"></script>
+    <script src="/js/logout.js"></script>
     {{/if}}
 
 </body>
